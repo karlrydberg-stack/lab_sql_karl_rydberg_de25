@@ -1,1 +1,3 @@
-SELECT * FROM staging.inventory;
+SELECT
+*
+FROM staging.inventory;
