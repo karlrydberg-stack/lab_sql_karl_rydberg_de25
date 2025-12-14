@@ -35,3 +35,20 @@ EXCEPT
 SELECT film_id FROM sakila.inventory
 ORDER BY film_id;
 ```
+
+## The head of business wants data on total movie sales, by category, and a related graph
+```sql revenue_by_category
+SELECT
+ name,
+ SUM(amount) AS amount
+FROM sakila.rev_by_category
+GROUP BY name
+ORDER BY amount DESC;
+```
+
+<BarChart
+    data={revenue_by_category}
+    title="Graph on total revenue, by category"
+    x=name
+    y=amount
+/>
