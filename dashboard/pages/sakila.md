@@ -5,7 +5,7 @@
 ```sql sum_replacement_cost
 SELECT
  address_id,
- SUM(replacement_cost) AS SEK
+ SUM(replacement_cost) AS amount
 FROM sakila.sum_replacement_cost
 GROUP BY address_id;
 ```
@@ -28,7 +28,7 @@ LIMIT 5;
     y=amount
 />
 
-## The store admin has found a discrepancy between the number of films in the official film list and the inventory. Which are they?
+## The store admin has found a discrepancy between the number of film ID:s in the official film list and the inventory. Which are they?
 ```sql missing_movies
 SELECT film_id FROM sakila.film
 EXCEPT
